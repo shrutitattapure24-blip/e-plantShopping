@@ -1,15 +1,17 @@
-# Paradise Nursery
+# e-plantShopping
 
-Paradise Nursery is a React shopping cart application for a plant store. It includes a landing page, a product catalog with plant categories, and a cart page where users can increase or decrease quantities, remove items, and see the total price update in real time.
+Project Name: e-plantShopping
+
+Paradise Nursery is the brand experience behind e-plantShopping, a modern plant shop application built with React and Vite. The project includes a landing page, company information, a product catalog with multiple plant categories, and a shopping cart where users can update quantities, remove items, and view total cost in real time.
 
 ## Features
 
-- Landing page with company branding and a Get Started action
-- About Us section explaining the brand
-- Product listing with at least three categories and plant cards
+- Landing page with brand messaging and a Get Started action
+- About Us section describing the company and plant expertise
+- Product listing with three categories and multiple plant items
 - Add to Cart interactions with cart count updates
-- Shopping cart page with quantity controls and a total summary
-- Responsive design for mobile and desktop views
+- Shopping cart with quantity controls, delete action, and total summary
+- Mobile and desktop responsive design
 
 ## Run locally
 

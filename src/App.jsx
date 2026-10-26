@@ -45,7 +45,7 @@ function HomePage() {
             Bring home lush, vibrant plants that brighten every room and turn
             ordinary spaces into calming green havens.
           </p>
-          <Link to="/plants" className="primary-button">
+          <Link to="/plants" className="primary-button get-started-button">
             Get Started
           </Link>
         </div>

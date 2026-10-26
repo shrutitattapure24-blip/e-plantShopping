@@ -1,14 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart } from './CartSlice'
+import { addItem } from './CartSlice'
 import plants, { categories } from './data/plants'
 
 const ProductList = () => {
   const dispatch = useDispatch()
   const cartItems = useSelector((state) => state.cart)
-  const cartProductIds = new Set(cartItems.map((item) => item.id))
+  const addedToCart = cartItems.reduce((acc, item) => {
+    acc[item.name] = true
+    return acc
+  }, {})
 
   return (
-    <main className="products-page">
+    <main className="products-page product-list">
       <div className="page-header">
         <div>
           <span className="eyebrow">Shop the Collection</span>
@@ -17,7 +20,7 @@ const ProductList = () => {
       </div>
 
       {categories.map((category) => (
-        <section key={category} className="category-section">
+        <section key={category} className="category-section product-list-section">
           <div className="section-heading">
             <h2>{category}</h2>
           </div>
@@ -26,7 +29,7 @@ const ProductList = () => {
             {plants
               .filter((plant) => plant.category === category)
               .map((plant) => {
-                const isAdded = cartProductIds.has(plant.id)
+                const isAdded = Boolean(addedToCart[plant.name])
 
                 return (
                   <article key={plant.id} className="plant-card">
@@ -40,9 +43,9 @@ const ProductList = () => {
                           type="button"
                           className="add-to-cart-button"
                           disabled={isAdded}
-                          onClick={() => dispatch(addToCart(plant))}
+                          onClick={() => dispatch(addItem({ ...plant, cost: plant.price }))}
                         >
-                          {isAdded ? 'Added' : 'Add to Cart'}
+                          {isAdded ? 'Added to Cart' : 'Add to Cart'}
                         </button>
                       </div>
                     </div>
