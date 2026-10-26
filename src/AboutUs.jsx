@@ -1,38 +1,19 @@
-const AboutUs = () => {
+import React from 'react';
+import './AboutUs.css';
+
+function AboutUs() {
   return (
-    <section className="about-us-container about-section">
-      <div className="section-heading">
-        <span className="eyebrow">Why Choose Us</span>
-        <h2>Grow a greener, happier home.</h2>
-      </div>
-
-      <div className="about-grid">
-        <div className="about-card">
-          <h3>Healthy Plants</h3>
-          <p>
-            We hand-pick vibrant, resilient houseplants that thrive in homes,
-            apartments, and office spaces across every season.
-          </p>
-        </div>
-
-        <div className="about-card">
-          <h3>Expert Guidance</h3>
-          <p>
-            Our team shares care tips, sunlight guidance, and watering advice to
-            help your collection flourish with confidence.
-          </p>
-        </div>
-
-        <div className="about-card">
-          <h3>Beautiful Living</h3>
-          <p>
-            Paradise Nursery brings joy and freshness indoors with curated
-            greenery that creates calm, color, and positive energy.
-          </p>
-        </div>
-      </div>
-    </section>
-  )
+    <div className="about-us-container">
+      <h1 className="about-us-heading">About Us</h1>
+      <p className="about-us-content">
+        Welcome to Paradise Nursery, where green meets serenity. We are dedicated to bringing nature closer to your living spaces by providing a wide selection of high-quality indoor, outdoor, air-purifying, and aromatic plants.
+      </p>
+      <p className="about-us-content">
+        Our mission is to foster sustainable green living and make plant ownership accessible and enjoyable for everyone. Whether you are an experienced plant parent or just starting your green journey, our carefully curated collection and expert care guidance ensure your plants thrive.
+      </p>
+    </div>
+  );
 }
 
-export default AboutUs
+AboutUs.displayName = 'AboutUs';
+export default AboutUs;
